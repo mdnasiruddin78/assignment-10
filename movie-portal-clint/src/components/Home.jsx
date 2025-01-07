@@ -14,13 +14,13 @@ const Home = () => {
             <section>
                 <Banner></Banner>
             </section>
-            <section className="py-20">
+            <section className="py-10">
                 <Featuredmovie></Featuredmovie>
             </section>
             <section>
                 <Movicategory></Movicategory>
             </section>
-            <section className="py-20">
+            <section className="py-10">
                 <Membership></Membership>
             </section>
         </div>

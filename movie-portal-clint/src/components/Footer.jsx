@@ -1,38 +1,35 @@
 import { FaSquareFacebook, FaSquareXTwitter } from "react-icons/fa6";
 import { SiInstagram } from "react-icons/si";
 import logo from '../assets/logo.webp';
+import { Link } from "react-router-dom";
 
 
 const Footer = () => {
     return (
-        <footer className="lg:flex md:flex justify-around bg-black text-white p-10 text-center">
-            <nav className='flex flex-col space-y-3'>
-                <h6 className="footer-title text-xl">MOVIE-PORTAL</h6>
-                <a className="link link-hover">Home</a>
-                <a className="link link-hover">All Movies</a>
-                <a className="link link-hover">copyright @ 2024-2030</a>
-            </nav>
-            <nav className='flex flex-col space-y-3'>
-                <h6 className="footer-title text-xl">CONTRACT-INFO</h6>
-                <a className="link link-hover">About us</a>
-                <a className="link link-hover">Contact</a>
-                <a className="link link-hover">See Movie Poster</a>
-            </nav>
-            <nav className='flex flex-col space-y-3'>
-                <h6 className="footer-title text-xl">social profiles</h6>
-                <div className='flex justify-center space-x-3 cursor-pointer'>
-                    <div>
-                        <img className='w-28 rounded-xl' src={logo} alt="" />
-                        <p className=''>www.MOVIE.com</p>
+        <div className="bg-black text-white">
+            <footer className="lg:flex md:flex justify-around  p-10 text-center">
+                <nav className='flex flex-col space-y-3'>
+                    <h6 className="footer-title text-xl">MOVIE-PORTAL</h6>
+                    <Link to='/'><a className="link link-hover">Home</a></Link>
+                    <Link to='/allMovies'><a className="link link-hover">All Movies</a></Link>
+                    <a className="link link-hover"></a>
+                </nav>
+                <nav className='flex flex-col space-y-3'>
+                    <div className="flex justify-center">
+                    <img className='w-28 rounded-xl' src={logo} alt="" />
                     </div>
-                    <div className='space-y-3 text-4xl'>
-                        <FaSquareFacebook className='text-blue-500' />
-                        <FaSquareXTwitter />
-                        <SiInstagram className='text-red-500' />
+                    <p className="text-center">copyright @ 2024-2030 All rights reserved</p>
+                </nav>
+                <nav className=''>
+                    <h6 className="footer-title text-xl">social profiles</h6>
+                    <div className='flex justify-around text-4xl cursor-pointer'>
+                        <a href="https://www.facebook.com/profile.php?id=100056252312818" target="_blank"><FaSquareFacebook className='text-blue-500' /></a>
+                        <a href="https://www.spacex.com/" target="_blank"><FaSquareXTwitter /></a>
+                        <a href="https://www.instagram.com/" target="_blank"><SiInstagram className='text-red-500' /></a>
                     </div>
-                </div>
-            </nav>
-        </footer>
+                </nav>
+            </footer>
+        </div>
     );
 };
 

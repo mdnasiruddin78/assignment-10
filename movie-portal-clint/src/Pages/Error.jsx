@@ -9,7 +9,7 @@ const Error = () => {
             </Helmet> */}
             <h3 className='text-3xl text-red-500 text-center font-bold'>PAGE NOT FOUND</h3>
             <p className='text-3xl text-red-500 text-center font-bold'>ERROR 404 STATUS</p>
-            <Link to="/" className='btn px-7 rounded-full border-2 bg-[#0ea5e9] text-white'>Back to Home</Link>
+            <Link to="/" className='btn px-7 rounded-full border-2 bg-[#002130] text-white'>Back to Home</Link>
         </div>
     );
 };

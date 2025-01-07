@@ -44,7 +44,7 @@ const Updatemovie = () => {
         const summary = e.target.summary.value;
         const updateMovie = { email,rating,poster, genre, title, duration, year, summary }
         // console.log(updateMovie)
-        fetch(`https://movie-portal-server-ashen-five.vercel.app/updatemovie/${_id}`, {
+        fetch(`http://localhost:5000/updatemovie/${_id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

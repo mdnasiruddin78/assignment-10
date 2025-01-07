@@ -5,8 +5,8 @@ const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const app = express()
 const port = process.env.PORT || 5000;
 
-app.use(cors())
-// app.use (cors({origin:["http://localhost:5000","https://sparkling-narwhal-878eb0.netlify.app"]}))
+
+app.use (cors({origin:["http://localhost:5173","https://sparkling-narwhal-878eb0.netlify.app","https://movie-portal-server-ashen-five.vercel.app"]}))
 app.use(express.json())
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.h3mej.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;

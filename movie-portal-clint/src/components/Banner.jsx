@@ -5,11 +5,9 @@ import movie4 from '../assets/movie4.webp';
 import React from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-// import './styles.css';
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
@@ -29,7 +27,7 @@ const Banner = () => {
           }}
           navigation={true}
           modules={[Autoplay, Pagination, Navigation]}
-          className="mySwiper"
+          className="mySwiper lg:h-[500px] rounded-xl"
         >
           <SwiperSlide><img src={movie1} alt="" /></SwiperSlide>
           <SwiperSlide><img src={movie2} alt="" /></SwiperSlide>

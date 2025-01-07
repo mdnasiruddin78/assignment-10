@@ -24,12 +24,12 @@ import Upcamming from "../components/Upcamming";
         {
             path: '/',
             element: <Home></Home>,
-            loader: () => fetch('https://movie-portal-server-ashen-five.vercel.app/ratingBySort')
+            loader: () => fetch('http://localhost:5000/ratingBySort')
         },
         {
             path: '/allmovies',
             element: <Allmovies></Allmovies>,
-            loader: () => fetch('https://movie-portal-server-ashen-five.vercel.app/addMovie')
+            loader: () => fetch('http://localhost:5000/addMovie')
         },
         {
             path: '/addmovie',
@@ -38,7 +38,6 @@ import Upcamming from "../components/Upcamming";
         {
             path: '/myfavorites',
             element: <PrivateRoute><Myfavorites></Myfavorites></PrivateRoute>,
-            // loader: ({params}) => fetch(`https://movie-portal-server-ashen-five.vercel.app/myFavorite/${params.email}`)
         },
         {
           path: '/login',
@@ -51,12 +50,12 @@ import Upcamming from "../components/Upcamming";
         {
           path: '/moviedetails/:id',
           element: <PrivateRoute><Moviedetails></Moviedetails></PrivateRoute>,
-          loader: ({params}) => fetch(`https://movie-portal-server-ashen-five.vercel.app/addMovie/${params.id}`)
+          loader: ({params}) => fetch(`http://localhost:5000/addMovie/${params.id}`)
         },
         {
            path: '/updatemovie/:id',
            element: <PrivateRoute><Updatemovie></Updatemovie></PrivateRoute>,
-           loader: ({params}) => fetch(`https://movie-portal-server-ashen-five.vercel.app/addMovie/${params.id}`)
+           loader: ({params}) => fetch(`http://localhost:5000/updatemovie/${params.id}`)
         },
         {
           path: '/upcamming',

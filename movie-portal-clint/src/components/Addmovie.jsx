@@ -54,7 +54,7 @@ const Addmovie = () => {
         const summary = e.target.summary.value;
         const addMovie = { email, rating, poster, genre, title, duration, year, summary }
         // console.log(addMovie)
-        fetch('https://movie-portal-server-ashen-five.vercel.app/addMovie', {
+        fetch('http://localhost:5000/addMovie', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -82,7 +82,7 @@ const Addmovie = () => {
                 <title>AddMovie Page</title>
             </Helmet>
             <div className="text-center mb-3">
-                <h1 className="text-5xl font-bold text-green-500">Add Movie</h1>
+                <h1 className="text-3xl font-bold text-green-500">Add Movie</h1>
             </div>
             <div className="card bg-base-100 w-full border-2 border-green-500 rounded-xl">
                 <form onSubmit={handleAddMovie} className="card-body">
